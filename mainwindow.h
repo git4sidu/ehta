@@ -3,7 +3,7 @@
 
 
 #include <QMainWindow>
-#include "udpsend.h"
+#include <QUdpSocket>
 
 namespace Ui {
 class MainWindow;
@@ -35,7 +35,7 @@ public:
          union U{
              char str[64];
              struct outsim_pack pack;
-         };
+         } u;
 
 float MaxRoll=0, MinRoll=0, MinPitch=0, MaxPitch=0;
 
